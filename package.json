@@ -1,12 +1,12 @@
 {
   "name": "react-docs-preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "preview the documents",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codexpo/react-docs-preview.git"
+    "url": "git+https://github.com/codexpoofficial/react-docs-preview"
   },
   "scripts": {
     "dev": "webpack -d --watch",
@@ -33,8 +33,8 @@
       "url": "https://www.linkedin.com/in/beingsrvsingh"
     }
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/codexpo/react-docs-preview#readme",
+  "license": "Codexpo",
+  "homepage": "https://github.com/codexpoofficial/react-docs-preview#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.0",
     "babel-core": "^6.24.1",
