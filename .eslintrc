@@ -1,0 +1,8 @@
+{
+    "rules": {
+        "extends": "airbnb",
+        "plugins": ["react"],
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"]
+    }
+}
