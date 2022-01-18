@@ -4,9 +4,13 @@ import React from 'react';
 
 import 'styles/loading.scss';
 
-const Loading = () => (
+const Loading = (props) => (
   <div className="loading-container">
-    <span className="loading" />
+    {props.loaderComponent ? (
+      props.loaderComponent
+    ) : (
+      <span className="loading" />
+    )}
   </div>
 );
 

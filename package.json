@@ -1,6 +1,6 @@
 {
   "name": "react-docs-preview",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "preview the documents",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -33,7 +33,7 @@
       "url": "https://www.linkedin.com/in/beingsrvsingh"
     }
   ],
-  "license": "Codexpo",
+  "license": "MIT",
   "homepage": "https://github.com/codexpoofficial/react-docs-preview#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.0",

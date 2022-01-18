@@ -20,6 +20,7 @@ import mp3 from '../sample_docs/sample.mp3'
 import rtf from '../sample_docs/sample.rtf';
 import pdf from '../sample_docs/sample.pdf';
 import ErrorIcon from './assets/file-error.png'
+import LoaderIcon from './assets/spinner-primary-large.png'
 
 //Example
 
@@ -31,16 +32,17 @@ const ErrorComponent = () => (
   </React.Fragment>
 );
 
-const onError =(e) =>{
-  console.log(e);
-}
+const onError =(e) => console.log(e);
+
+const LoaderComponent = () => <img src={LoaderIcon} className="loading" />;
 
 ReactDOM.render(
   <FileViewer
-    fileType="web"
-    filePath={sampleHouse}
+    fileType="pdf"
+    filePath={pdf}
     errorComponent={<ErrorComponent/>}
     onError={e => onError(e)}
+    loaderComponent={<LoaderComponent/>}
   />,
   window.document.getElementById('app')
 );

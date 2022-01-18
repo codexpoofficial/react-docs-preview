@@ -11,7 +11,7 @@ const Error = (props) => (
       props.errorComponent
     ) : (
       <div>
-        <img src={ErrorIcon} />{" "}
+        <img src={ErrorIcon} />
       </div>
     )}
   </div>

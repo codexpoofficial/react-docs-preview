@@ -142,7 +142,7 @@ export default class PDFDriver extends React.Component {
   renderLoading() {
     if(this.state.pdf && this.state.pdf.name) return <Error errorComponent={this.props.errorComponent}/>
     if (this.state.pdf) return null;
-    return <Loading/> //(<div className="pdf-loading">LOADING ({this.state.percent}%)</div>);
+    return <Loading loaderComponent={this.props.loaderComponent}/>
   }
 
   render() {

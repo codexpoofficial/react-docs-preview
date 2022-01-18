@@ -16,7 +16,7 @@ preview the documents
 
 ## Usage
 
-Note this module works best with react 16+.  If you are using React < 16 you will likely need to use version 0.5. `npm install react-docs-preview@1.0.0`.
+Note this module works best with react 16+.  If you are using React < 16 you will likely need to use version 0.5. `npm install react-docs-preview@1.0.3`.
 
 There is one main React component, `FileViewer`, that takes the following props:
 
@@ -33,6 +33,9 @@ pass a callback for a logging utility.
 `errorComponent` react element [optional]: A component to render in case of error
 instead of the default error component that comes packaged with react-file-viewer.
 
+`loaderComponent` react element [optional]: A component to initial loading before render the component
+instead of the default loading component that comes packaged with react-file-viewer.
+
 `unsupportedComponent` react element [optional]: A component to render in case
 the file format is not supported.
 
@@ -48,19 +51,28 @@ import { CustomErrorComponent } from 'custom-error';
 const file = 'http://example.com/image.png'
 const type = 'png'
 
+const ErrorComponent = () => (
+  <React.Fragment>
+    <div>
+    <img src={ErrorIcon} />
+    </div>
+  </React.Fragment>
+);
+
+const onError =(e) => console.log(e);
+
+const LoaderComponent = () => <img src={LoaderIcon} className="loading" />;
+
 class MyComponent extends Component {
   render() {
     return (
       <FileViewer
         fileType={type}
         filePath={file}
-        errorComponent={CustomErrorComponent}
-        onError={this.onError}/>
+        errorComponent={<ErrorComponent/>}
+        onError={e => onError(e)}
+        loaderComponent={<LoaderComponent/>}
     );
-  }
-
-  onError(e) {
-    logger.logError(e, 'error in file-viewer');
   }
 }
 ```
